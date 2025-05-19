@@ -1,34 +1,19 @@
-"use client";
-// we import button from heroui, as it's a third party ui library
-import {Button} from "@heroui/react"
-import React, {useState} from "react";
-
+import AccordionTutorial from "@/components/ui/AccordionTutorial";
+import { ButtonTutorial } from "@/components/ui/ButtonTutorial";
+import Wrapper from "@/components/Wrapper";
+import { Divider } from "@heroui/react";
 
 export default function Home() {
-const [value, setValue] = useState(false)
 
-const valueHanlder = ()=>{
-  setValue(prev=>!prev)
-}
   return (
-  <>
-  {/* here this button perfor onPress action and call the function */}
-  {/* 
-  button has different properties -> props
-  color is one of them.
-  size is one of them
-  onPress is an eventHandler
-  
-  */}
-  <Button onPress={valueHanlder} color="warning" size="lg">HeroUi Button</Button>
-
-  <p>
-{
-  value && "Habib Khan"
-}
-  </p>
-
-
-  </>
+    <>
+   <Wrapper>
+     <h1 className="text-3xl my-5">Learining NextJS + HeroUI</h1>
+     <ButtonTutorial/>
+    <Divider className="my-10"/>
+    <h2 className="text-3xl font-bold mb-10">Accordion Tutorial</h2>
+    <AccordionTutorial/>
+   </Wrapper>
+    </>
   );
 }
