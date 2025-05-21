@@ -1,19 +1,17 @@
-import AccordionTutorial from "@/components/ui/AccordionTutorial";
-import { ButtonTutorial } from "@/components/ui/ButtonTutorial";
-import Wrapper from "@/components/Wrapper";
-import { Divider } from "@heroui/react";
+"use client";
+import Wrapper from '@/components/Wrapper';
+import { Button } from '@heroui/react'
+import React from 'react'
 
-export default function Home() {
-
+const Home = () => {
   return (
-    <>
-   <Wrapper>
-     <h1 className="text-3xl my-5">Learining NextJS + HeroUI</h1>
-     <ButtonTutorial/>
-    <Divider className="my-10"/>
-    <h2 className="text-3xl font-bold mb-10">Accordion Tutorial</h2>
-    <AccordionTutorial/>
-   </Wrapper>
-    </>
-  );
+    <Wrapper>
+      <div>
+      <Button color='secondary'>blue color by default</Button>
+      <p className='text-primary'>This is nextjs tutorial with heroui to build any kind of website with ease.</p>
+    </div>
+    </Wrapper>
+  )
 }
+
+export default Home
